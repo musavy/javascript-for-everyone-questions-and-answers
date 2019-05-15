@@ -1,3 +1,8 @@
+console.log(
+  "#################### Question number one #########################"
+);
+
+
 //#################### Question number one #########################
 
 //Looping a triangle Write a loop that makes seven calls to console.log to output the following triangle:
@@ -7,7 +12,9 @@ for (var i = 0; i < 7; i++) {
   triangle += "#";
   console.log(triangle);
 }
-
+console.log(
+  "#################### Question 2 #########################"
+);
 // ############ Question 2 ############
 
 //FizzBuzz Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, modify your program to print "FizzBuzz" for numbers that are divisible by both 3 and 5 
@@ -47,7 +54,9 @@ return FizzBuzz
 
 console.log(FizzBuzz());
 
-
+console.log(
+  "#################### Question 3 #########################"
+);
 //########### Question 3 ########
 
 /* Maximum Math.max returns its largest argument.
@@ -85,7 +94,9 @@ console.log(findMax(200,10,5));
 console.log(findMax(5,-2,-200));
 
 
-
+console.log(
+  "#################### Question 4 #########################"
+);
 // ########### Question 4 ###########
 
 /* Reversing an array Arrays have a reverse method which changes the array
@@ -109,7 +120,9 @@ console.log(findMax(5,-2,-200));
     
 
   
-
+console.log(
+  "#################### Question 5 #########################"
+);
  
 /*  ############# Question 5 ############### */
 
@@ -132,19 +145,82 @@ console.log(modifyArray(['carrot','banana','apple','orange','avacado','tomato'])
 console.log(modifyArray(['badrang','banjasia','muli','zardak','kachalo']))
 console.log(modifyArray(['Apple','Sumsung','LG']))
 
-
+console.log(
+  "#################### Question 6 #########################"
+);
 /*  ################### Question 6 ############### */
 /* 
-Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique */
+Write a function which returns array of seven random numbers in a range of 0-9.
+ All the numbers must be unique */
 
 const sevenRandomNumbers = () => {
 
-const numbers=[];
+const arr=[];
 
-if(numbers.length<7){
-    
+while(arr.length<7){
+    const rand=Math.floor(Math.random()*9)
+    if(!arr.includes(rand)){
+        arr.push(rand)
+    }
 }
-
-
-    
+return arr;
+ 
 };
+console.log(sevenRandomNumbers());
+
+console.log(
+  "#################### Question 7 #########################"
+);
+
+/* ################# Question 7 ########### */
+
+/* 
+Write a funch which takes any number of arguments and return the sum of the arguments
+
+
+ */
+
+ const SumOfNumbers=(...arr)=>{
+     let Total=0;
+     for(item of arr){
+         Total+=item
+     }
+     return Total
+ }
+
+ console.log(SumOfNumbers(1,2,3));
+
+
+ // Second mehtod
+
+ function sum() {
+   var sum = 0;
+   for (var i = 0; i < arguments.length; i++) {
+     sum += arguments[i];
+   }
+   return sum;
+ }
+ console.log(sum(1, 2, 3,5));
+
+ console.log(
+   "#################### Question 8 #########################"
+ );
+
+ /* ¤¤¤¤¤¤¤¤¤¤ Question 8 ¤¤¤¤¤¤¤¤¤¤¤¤ */
+
+ /* Write a function which removes items 
+ from the middle of an array and replace with three items */
+
+
+ const removeMiddleItem=(arr, ...replacement)=>{
+
+    const pointIndex=(arr.length-1)/2;
+    const howManyToRemove=Math.floor(pointIndex) !==Math.ceil(pointIndex)?2:1;
+    arr.splice(Math.floor(pointIndex),howManyToRemove, ...replacement);
+ return arr;
+
+}
+ console.log(removeMiddleItem(['Masood','Mustafa','koray','sheery','kunjan','harri','garland'],1,2,3));
+ console.log(removeMiddleItem(['A','B','C','D','E'],25,30,40));
+ 
+ 
