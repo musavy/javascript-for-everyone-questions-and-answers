@@ -222,5 +222,44 @@ Write a funch which takes any number of arguments and return the sum of the argu
 }
  console.log(removeMiddleItem(['Masood','Mustafa','koray','sheery','kunjan','harri','garland'],1,2,3));
  console.log(removeMiddleItem(['A','B','C','D','E'],25,30,40));
+
+ 
+ console.log("################## Qeustion 9 ################## ");
+ /* 
+ ################## Qeustion 9 ################## */
+
+/* Calculate the total annual income of the person by extracting the following text.
+ 'He earns 5000 euro from salary per
+ month, 10000 euro annual bonus, 15000 euro online courses per month.' */
+ 
+ function Calculate() {
+     const text =
+     "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
+     const numbers = text.match(/[\d]+/g).map((num) => Number(num));
+     const [salary, annualBonus, courses] = numbers;
+     
+     const yearlyIncome = salary * 12 + annualBonus + courses * 12;
+     
+     console.log("Yearly income: ", yearlyIncome);
+    }
+    Calculate();
+
+     console.log("################## Qeustion 10 ################## ");
+
+/*      Create a function that takes two strings and returns true if the first argument ends 
+     with the second argument; otherewise return false . Take two strings as arguments.
+      Determine if second string matches ending of first string. Return boolean value. Example */
+
+    const Intgrify=(str1,str2)=>{
+        return str1.endsWith(str2);
+
+    }
+    console.log(Intgrify("integrity", "ity"));
+    console.log(Intgrify("integration", "tio"));
+    console.log(Intgrify("connection", "sion"));
+    console.log(Intgrify("connection", "tion"));
+           
+
+
  
  
