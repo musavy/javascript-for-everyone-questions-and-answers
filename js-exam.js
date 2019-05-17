@@ -317,7 +317,10 @@ console.log("X = " + solveLinEquation(5, 2, 22));
 console.log("X = " + solveLinEquation(4, 1, 13));
 console.log("X = " + solveLinEquation(8, 2, 18));
 
-// 17. Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+// 17. Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write
+// a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+
 
 // 18. Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 function printArr(arr) {
@@ -354,5 +357,101 @@ console.log(reverseArr(["A", "B", "C", "D", "E"]));
 console.log(reverseArr(["I", "II", "III", "IV", "V", "VI"]));
 
 // 21.  Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array.
-function capitalizeArray(carsArr) {
-    l...
+
+
+
+
+
+console.log("¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ Todo list¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤");
+
+
+
+const todoList=[];
+
+const dateTime=()=>{
+    const date=new Date();
+    const yy=date.getFullYear();
+    const mm=date.getMonth()+1;
+    const day=date.getDay();
+    const min=date.getMinutes();
+    const hours=date.getHours();
+
+    return `${day}/${mm}/${yy} ${hours}:${min}`
+}
+console.log(dateTime());
+
+
+const addTodoList=(task,time,completed)=>{
+
+    const firstTask= todoList.push({task,time,completed})
+
+return firstTask
+}
+
+console.log(addTodoList("masood",dateTime(),true));
+console.log(todoList);
+
+const deletTodo=(i)=>{
+
+    return todoList.splice(i,1)
+
+}
+console.log(deletTodo(0));
+
+const editTodo=(index,task,time,completed)=>{
+
+    return todoList.splice(index,1,{task,time,completed})
+
+}
+
+console.log(editTodo(0,"mustafa",dateTime(),false));
+
+
+
+
+console.log("############################333");
+
+
+// A quadratic equation is described as follows: ax2 + bx + c = 0.
+//Write a function that calculates the value or values of a quadratic equation, solvQuadEquation.
+
+// solve for x given parameters a, b and c: x = (-b ± (b^2 - 4ac)^1/2) / 2a */
+
+function solveQuadEquation(a, b, c) {
+ var xNum = ((-b + (b ** 2 - 4 * a * c) ** 0.5) / 2) * a;
+ var yNum = ((-b - (b ** 2 - 4 * a * c) ** 0.5) / 2) * a;
+ return [xNum, yNum];
+}
+
+console.log(solveQuadEquation(1, 2, 1));
+
+function printSolutionsQuadEquation(a, b, c) {
+ var xNum = ((-b + (b ** 2 - 4 * a * c) ** 0.5) / 2) * a;
+ var yNum = ((-b - (b ** 2 - 4 * a * c) ** 0.5) / 2) * a;
+ if (xNum !== xNum && yNum !== yNum) {
+   /* this checks if xNum o yNum are NaN, since NaN is the only number not equal to itself */
+   console.log(`This quadratic equation has no real solutions.`);
+ } else if (xNum === xNum && yNum !== yNum) {
+   console.log(
+     `This quadratic equation has one real solution: x = ${xNum}; and one imaginary solution.`
+   );
+ } else if (xNum !== xNum && yNum === yNum) {
+   console.log(
+     `This quadratic equation has one real solution: x = ${yNum}; and one imaginary solution.`
+   );
+ } else if (xNum === yNum) {
+   console.log(
+     `This quadratic equation has two identical real solutions: x = ${xNum}.`
+   );
+ } else if (xNum !== yNum) {
+   console.log(
+     `This quadratic equation has two real solutions: x = ${xNum} and x = ${yNum}.`
+   );
+ } else {
+   console.log("Error.");
+ }
+}
+
+printSolutionsQuadEquation(2, 4, 1);
+
+

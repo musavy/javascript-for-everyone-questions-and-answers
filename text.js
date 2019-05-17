@@ -353,43 +353,43 @@ console.log("¤¤¤¤¤¤¤¤ Question Bonus ¤¤¤¤¤¤¤");
 
 const users = [
         {
-        name: "Brook",
+        name: "masood",
     scores: 75,
     skills: ["HTM", "CSS", "JS"],
     age: 16
   },
         {
-        name: "Alex",
+        name: "mustafa",
     scores: 80,
     skills: ["HTM", "CSS", "JS"],
     age: 18
   },
         {
-        name: "David",
+        name: "Husham",
     scores: 75,
     skills: ["HTM", "CSS"],
     age: 22
   },
         {
-        name: "John",
+        name: "Andre",
     scores: 85,
     skills: ["HTM"],
     age: 25
   },
         {
-        name: "Sara",
+        name: "Sarakhan",
     scores: 95,
     skills: ["HTM", "CSS", "JS"],
     age: 26
   },
         {
-        name: "Martha",
+        name: "Koray",
     scores: 80,
     skills: ["HTM", "CSS", "JS"],
     age: 18
   },
         {
-        name: "Thomas",
+        name: "Harri",
     scores: 90,
     skills: ["HTM", "CSS", "JS"],
     age: 20
@@ -408,7 +408,7 @@ const users = [
 
 console.log(scoresGreaterThan85(users));
       const newUser = {
-        name: "Asabeneh",
+        name: "Musavy",
     scores: 800,
     skills: ["HTML", "CSS", "JS"],
     age: 250
