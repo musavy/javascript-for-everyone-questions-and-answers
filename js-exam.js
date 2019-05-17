@@ -455,3 +455,41 @@ function printSolutionsQuadEquation(a, b, c) {
 printSolutionsQuadEquation(2, 4, 1);
 
 
+console.log("¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ prime RAnge ¤¤¤¤¤¤¤44");
+
+function getPrimesInRange(beginning, ending) {
+  // declare empty array for prime numbers
+  let primes = [];
+
+  // loop through the range
+  for (let number = beginning; number < ending + 1; number++) {
+    // all numbers have at least one factor (themselves)
+    let factors = 1;
+
+    // loop through the divisors of the number, starting at 1 and ending at half the number. Examples:
+    // If number = 1, the loop doesn't run
+    // If number = 2, the loop runs once (for divisor 1)
+    // If number = 6, the loop runs three times (for divisors 1, 2, and 3)
+    // If number = 7, the loop runs three times (for divisors 1, 2, and 3)
+    // etc
+    for (let divisor = 1; divisor < Math.ceil((number + 1) / 2); divisor++) {
+      if (number % divisor === 0) {
+        factors++;
+      }
+    }
+
+    // if the number has exactly two factors (1 and itself), it is prime
+    if (factors === 2) {
+      primes.push(number);
+    }
+  }
+
+  console.log(primes);
+  return primes;
+}
+
+getPrimesInRange(1, 100);
+getPrimesInRange(-10, 10);
+
+
+
